@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-            <title>News map</title>
+            <title>The Seven Wonders of the Ancient World</title>
 
             <meta charset="utf-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +9,9 @@
             <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
             integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
             crossorigin=""/>
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
 
             <!-- Make sure you put this AFTER Leaflet's CSS -->
             <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
@@ -18,15 +21,18 @@
             <!--The following style tag contains CSS for altering the appearance of the textbox on narrow screens-->
             <!--The 500px value on line 33 determines at what width the textbox will cover the entire width of the map-->
              <style>
+                
+
                 #textbox{
                     position: absolute;
                     border-radius: 2px;
                     font-family: sans-serif;
+                    color: rgb(149, 195, 199);
                     top: 20px;
                     left: 20px;
                     max-width: 200px;
                     z-index: 1003;
-                    background: white;
+                    background: #890f2b;
                     box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);  
                     }
 
@@ -74,9 +80,14 @@
                     }
                 }
 
-                a {
+                a{
                     
                     
+                }
+
+                h1, h2, h3 {
+                    font-family: 'Helvetica', cursive;
+                    letter-spacing: 1px;
                 }
 
                 #mapTitle{
@@ -94,9 +105,9 @@
     <body>
         <div id='textbox'>
           <div id="txtcontainer">
-            <h3 id="mapTitle">Map title</h3>
+            <h3 id="mapTitle">The Seven Wonders of the Ancient World </h3>
             <p id="mapDescription"><img id="boximg"  src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
-            alt="Smiley face" height="1" width="1">Initial map description. Replace this with your own description of your map</p>
+            alt="Smiley face" height="1" width="1">This map shows the locations of the Seven Wonders of the Ancient World.</p>
           </div>
             <img id="boximg"  src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="" height="1" width="1">
             <div id="legende">
@@ -113,80 +124,112 @@
     {
       "type": "Feature",
       "properties": {
-        "imgUrl": "https://gauteheggen.com/wp-content/uploads/2026/09/P5019738-512x384.jpg",
-        "title": "Nesodden",
-        "descr": "Nice day waiting for the boat",
-        "shortDescr": "Click for more.."
+        "imgUrl": "https://eller8004.azurewebsites.net/wp-content/uploads/2026/10/pyramides-edited.jpeg",
+        "title": "The pyramids of Giza",
+        "descr": "",
+        "shortDescr": "Click for more information"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          10.6489246,
-          59.851567
+          31.1343,
+          29.9792
         ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "imgUrl": "https://gauteheggen.com/wp-content/uploads/2026/09/P5300059-512x384.jpg",
-        "title": "Passenger boat",
-        "descr": "These quick passenger boats go along the fjord. In the summer months you can take it to Drøbak.",
-        "shortDescr": "more..."
+        "imgUrl": "https://eller8004.azurewebsites.net/wp-content/uploads/2026/10/zeus-edited.jpg",
+        "title": "The Statue of Zeus at Olympia",
+        "descr": "",
+        "shortDescr": "Click for more information"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          10.7134998,
-          59.9008789
+          21.630000,
+          37.637861
         ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "imgUrl": "https://gauteheggen.com/wp-content/uploads/2026/09/P5019751-512x391.jpg",
-        "title": "Aker Brygge",
-        "descr": "Shops and restaurants at Aker brygge. Also, the national museum.",
-        "shortDescr": "more..."
+        "imgUrl": "https://eller8004.azurewebsites.net/wp-content/uploads/2026/10/artemis-edited.jpg",
+        "title": "The Temple of Artemis at Ephesus",
+        "descr": "",
+        "shortDescr": "Click for more information"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          10.7289905,
-          59.9106099
+          27.364,
+          37.949
         ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "imgUrl": "https://gauteheggen.com/wp-content/uploads/2026/09/P4309697-512x384.jpg",
-        "title": "Royal palace",
-        "descr": "The King and the queen(s?) live here.",
-        "shortDescr": "more.."
+        "imgUrl": "https://eller8004.azurewebsites.net/wp-content/uploads/2026/10/Mausoleum-Halicarnassus.webp",
+        "title": "Mausoleum at Halicarnassus",
+        "descr": "",
+        "shortDescr": "Click for more information"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          10.7278322,
-          59.9170252
+          27.4241,
+          37.0379
         ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "imgUrl": "https://gauteheggen.com/wp-content/uploads/2026/09/P4309705-512x384.jpg",
-        "title": "Oslomet",
-        "descr": "You can learn about maps here among other things.",
-        "shortDescr": "more.."
+        "imgUrl": "https://eller8004.azurewebsites.net/wp-content/uploads/2026/10/gardenshangign-edited.jpg",
+        "title": "The Hanging Gardens of Babylon ",
+        "descr": "",
+        "shortDescr": "Click for more information"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          10.7335557,
-          59.9209739
+           44.4212,
+          32.5424
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "imgUrl": "https://eller8004.azurewebsites.net/wp-content/uploads/2026/10/rhodes-edited.jpg",
+        "title": "The colossus of Rhodes",
+        "descr": "",
+        "shortDescr": "Click for more information"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.2265,
+           36.4511
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "imgUrl": "https://eller8004.azurewebsites.net/wp-content/uploads/2026/10/lighthouse-edited.png",
+        "title": "The Lighthouse of Alexandria",
+        "descr": "",
+        "shortDescr": "Click for more information"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.8860,
+          31.2148
         ]
       }
     }
@@ -195,7 +238,7 @@
 
             //GEOJSON END
 
-            let map = L.map('mapid').setView([59.90891, 10.701723], 11);
+            let map = L.map('mapid').setView([47.0707, 15.4395], 11);
 
             //You can swap map tiles by commenting in/out the code below. 
             //You can also copy various tile codes from the following url. Some providers require you register to get a token:
@@ -214,10 +257,10 @@
               attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
             }).addTo(map);*/
 
-           L.tileLayer('https://tile.openstreetmap.de/{z}/{x}/{y}.png', {
-	maxZoom: 18,
-	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(map);
+            var OpenStreetMap_HOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+  maxZoom: 19,
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Tiles style by <a href="https://www.hotosm.org/" target="_blank">Humanitarian OpenStreetMap Team</a> hosted by <a href="https://openstreetmap.fr/" target="_blank">OpenStreetMap France</a>'
+            }).addTo(map);
 
 
             map.zoomControl.setPosition('bottomleft');
@@ -271,7 +314,72 @@
             }
 
             //This is a function for activating your geojson data in the map
+            let customMarkerIcon = L.divIcon({
+                className: 'custom-marker',
+                html: '<svg xmlns="http://www.w3.org/2000/svg" width="25" height="41" viewBox="0 0 25 41"><path d="M12.5 0C5.6 0 0 5.6 0 12.5c0 9.4 12.5 28.5 12.5 28.5S25 21.9 25 12.5C25 5.6 19.4 0 12.5 0zm0 17.7a5.2 5.2 0 1 1 0-10.4 5.2 5.2 0 0 1 0 10.4z" fill="#890f2b"/><circle cx="12.5" cy="12.5" r="4.3" fill="white"/></svg>',
+                iconSize: [25, 41],
+                iconAnchor: [12, 41],
+                popupAnchor: [0, -34],
+                tooltipAnchor: [16, -28]
+            });
+            let schlossbergIcon = L.divIcon({
+              className: 'custom-marker',
+              html: '<svg xmlns="http://www.w3.org/2000/svg" width="25" height="41" viewBox="0 0 25 41"><path d="M12.5 0C5.6 0 0 5.6 0 12.5c0 9.4 12.5 28.5 12.5 28.5S25 21.9 25 12.5C25 5.6 19.4 0 12.5 0zm0 17.7a5.2 5.2 0 1 1 0-10.4 5.2 5.2 0 0 1 0 10.4z" fill="#b92548"/><circle cx="12.5" cy="12.5" r="4.3" fill="white"/></svg>',
+              iconSize: [25, 41],
+              iconAnchor: [12, 41],
+              popupAnchor: [0, -34],
+              tooltipAnchor: [16, -28]
+            });
+            let universityIcon = L.divIcon({
+              className: 'custom-marker',
+              html: '<svg xmlns="http://www.w3.org/2000/svg" width="25" height="41" viewBox="0 0 25 41"><path d="M12.5 0C5.6 0 0 5.6 0 12.5c0 9.4 12.5 28.5 12.5 28.5S25 21.9 25 12.5C25 5.6 19.4 0 12.5 0zm0 17.7a5.2 5.2 0 1 1 0-10.4 5.2 5.2 0 0 1 0 10.4z" fill="#a2d2ff"/><circle cx="12.5" cy="12.5" r="4.3" fill="white"/></svg>',
+              iconSize: [25, 41],
+              iconAnchor: [12, 41],
+              popupAnchor: [0, -34],
+              tooltipAnchor: [16, -28]
+            });
+            let eggenbergIcon = L.divIcon({
+                className: 'custom-marker',
+                html: '<svg xmlns="http://www.w3.org/2000/svg" width="25" height="41" viewBox="0 0 25 41"><path d="M12.5 0C5.6 0 0 5.6 0 12.5c0 9.4 12.5 28.5 12.5 28.5S25 21.9 25 12.5C25 5.6 19.4 0 12.5 0zm0 17.7a5.2 5.2 0 1 1 0-10.4 5.2 5.2 0 0 1 0 10.4z" fill="#5f0f40"/><circle cx="12.5" cy="12.5" r="4.3" fill="white"/></svg>',
+                iconSize: [25, 41],
+                iconAnchor: [12, 41],
+                popupAnchor: [0, -34],
+                tooltipAnchor: [16, -28]
+            });
+            let murinselIcon = L.divIcon({
+              className: 'custom-marker',
+              html: '<svg xmlns="http://www.w3.org/2000/svg" width="25" height="41" viewBox="0 0 25 41"><path d="M12.5 0C5.6 0 0 5.6 0 12.5c0 9.4 12.5 28.5 12.5 28.5S25 21.9 25 12.5C25 5.6 19.4 0 12.5 0zm0 17.7a5.2 5.2 0 1 1 0-10.4 5.2 5.2 0 0 1 0 10.4z" fill="#335c67"/><circle cx="12.5" cy="12.5" r="4.3" fill="white"/></svg>',
+              iconSize: [25, 41],
+              iconAnchor: [12, 41],
+              popupAnchor: [0, -34],
+              tooltipAnchor: [16, -28]
+            });
+            let hauptplatzIcon = L.divIcon({
+                className: 'custom-marker',
+                html: '<svg xmlns="http://www.w3.org/2000/svg" width="25" height="41" viewBox="0 0 25 41"><path d="M12.5 0C5.6 0 0 5.6 0 12.5c0 9.4 12.5 28.5 12.5 28.5S25 21.9 25 12.5C25 5.6 19.4 0 12.5 0zm0 17.7a5.2 5.2 0 1 1 0-10.4 5.2 5.2 0 0 1 0 10.4z" fill="#f7b1b0"/><circle cx="12.5" cy="12.5" r="4.3" fill="white"/></svg>',
+                iconSize: [25, 41],
+                iconAnchor: [12, 41],
+                popupAnchor: [0, -34],
+                tooltipAnchor: [16, -28]
+            });
+
             let layerGroup = L.geoJSON([], {
+                pointToLayer: function (feature, latlng) {
+              let icon = feature.properties.title === 'Schlossberg' ? schlossbergIcon : customMarkerIcon;
+              if (feature.properties.title === 'University of Graz') {
+                icon = universityIcon;
+              }
+              if (feature.properties.title === 'Castle Eggenberg') {
+                icon = eggenbergIcon;
+              }
+              if (feature.properties.title === 'Murinsel') {
+                icon = murinselIcon;
+              }
+              if (feature.properties.title === 'Hauptplatz Graz') {
+                icon = hauptplatzIcon;
+              }
+                return L.marker(latlng, { icon: icon });
+                },
                 onEachFeature: function (feature, layer) {
                     var props = feature.properties;
                     layer.bindTooltip(props.shortDescr);
@@ -287,6 +395,7 @@
             }).addTo(map);
             
             layerGroup.addData(myGeoJson);
+            map.fitBounds(layerGroup.getBounds(), { padding: [40, 40] });
            
             //The following function is for development only, it logs lat, lng and zoomlevel to the console
             //for simpler setting of center and zoom level. It is commented out by default.
